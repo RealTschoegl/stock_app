@@ -31,6 +31,7 @@ class Company
 	def self.aggregator
 		add_cash_flow
 		add_cash_on_hand
+		time_value_of_money
 		num_shares
 	end
 	
@@ -59,24 +60,36 @@ class Company
 		end
 	end
 	
-	#def time_value_of_money
-	#	present value = future value / (1 + interest rate)^number of years
-	#end
+	def self.time_value_of_money
+	
+		tvm_beta = Company.beta
+		tvm_sector_beta = Company.sector_beta
+		tvm_years = Company.years
+	 
+		@@companies.map do |company, value|
+			present_value = value[:expected_share_value]
+			future_growth = (1 + tvm_sector_beta + tvm_beta)
+			interest_rate = (1 + tvm_beta)
+			years_out = tvm_years
+		
+			value[:expected_share_value] = (present_value*(future_growth**years_out))/((interest_rate)**years_out)
+		end
+	end
 
 	
-	#def interest_rate
-	#	puts "What do you think the market will grow at?"
-	#	growth_rate = gets.chomp.to_f
-	#end	
+	def self.beta
+		puts "What do you think the market will grow at?"
+		gets.chomp.to_f/100
+	end	
 
-	#def growth_rate
-	#	puts "Do you think this sector will grow faster than other sectors?"
-	#	growth_rate = gets.chomp.to_f
-	#end
+	def self.sector_beta
+		puts "Do you think this sector will grow faster than other sectors?"
+		gets.chomp.to_f/100
+	end
 	
-	#def years
-	#	puts "How long do you think this will continue for?  10 years? 20 years? 30 years?"
-	#	years_estimate = gets.chomp.to_f
-	#end
+	def self.years
+		puts "How long do you think this will continue for?  10 years? 20 years? 30 years?"
+		gets.chomp.to_f
+	end
 	
 end
