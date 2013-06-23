@@ -75,7 +75,6 @@ class Company
 			value[:expected_share_value] = (present_value*(future_growth**years_out))/((interest_rate)**years_out)
 		end
 	end
-
 	
 	def self.beta
 		puts "What do you think the market will grow at?"
