@@ -23,6 +23,6 @@ quote_symbols = "yhoo,goog,msft,fb"
 # end
 
 YahooFinance::get_quotes( quote_type, quote_symbols ) do |qt|
-    puts "QUOTE: #{qt.symbol}"
+    puts "Quote: #{qt.symbol}"
     puts qt.lastTrade
 end
