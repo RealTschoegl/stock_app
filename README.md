@@ -6,7 +6,11 @@ customized stock prices.  It aims to make it easier for average investors to gen
 care of the more sophisticated parts of economic calculation for them.
 
 Tasks to complete:
+
 [ ] - Launch a rails application to house the files
+
 [ ] - Add a function that pulls real-time stock prices
+
 [ ] - Write the values from a .csv into a PostgreSQL database
+
 [ ] - Pull the database values into the 'frame'
