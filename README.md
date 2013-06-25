@@ -7,9 +7,9 @@ care of the more sophisticated parts of economic calculation for them.
 
 Tasks to complete:
 
-[ ] - Launch a rails application to house the files
+[X] - Add a function that pulls real-time stock prices
 
-[ ] - Add a function that pulls real-time stock prices
+[ ] - Launch a rails application to house the files
 
 [ ] - Write the values from a .csv into a PostgreSQL database
 
