@@ -1,7 +1,9 @@
 class Company
 
-@risk_free_rate = .0141 #5 year treasury yield at market
-@market_growth_rate = .2038 #S&P500 1 year growth rate
+require 'yahoofinance'
+
+@@risk_free_rate = 0.0141 #5 year treasury yield at market
+@@market_growth_rate = 0.2038 #S&P500 1 year growth rate
 
 @@companies = {
 	"GOOG" => {
@@ -9,8 +11,13 @@ class Company
 		:cash_on_hand => 50100,
 		:num_shares => 332, 
 		:PE_ratio => 25.8,
+		:dividend_per_share => 0, #Forward Annual Dividend Rate
+		:dividend_growth_rate => 0, #Forward Annual Dividend Yield
 		:beta => 1.19,
+		:current_stock_price => 0,
 		:expected_share_value => 0,
+		:capm_share_value => 0,
+		:dividend_share_value => 0,
 		:composite_share_value => 0
 		},
 	"MSFT" => {
@@ -18,8 +25,13 @@ class Company
 		:cash_on_hand => 73790,
 		:num_shares => 8350,
 		:PE_ratio => 17.5,
+		:dividend_per_share => 0.92,
+		:dividend_growth_rate => 0.028,
 		:beta => 1.10,
+		:current_stock_price => 0,
 		:expected_share_value => 0, 
+		:capm_share_value => 0,
+		:dividend_share_value => 0,
 		:composite_share_value => 0
 		},
 	"YHOO" => {
@@ -27,8 +39,13 @@ class Company
 		:cash_on_hand => 3010,
 		:num_shares => 1008,
 		:PE_ratio => 6.67,
-		:beta => .89,
+		:dividend_per_share => 0,
+		:dividend_growth_rate => 0,
+		:beta => 0.89,
+		:current_stock_price => 0,
 		:expected_share_value => 0,
+		:capm_share_value => 0,
+		:dividend_share_value => 0,
 		:composite_share_value => 0
 		},
 	"FB" => {
@@ -36,13 +53,20 @@ class Company
 		:cash_on_hand => 15103,
 		:num_shares => 2420,
 		:PE_ratio => 872,
+		:dividend_per_share => 0,
+		:dividend_growth_rate => 0,
 		:beta => 1.33,
+		:current_stock_price => 10,
 		:expected_share_value => 0,
+		:capm_share_value => 0,
+		:dividend_share_value => 0,
 		:composite_share_value => 0
 		}
 }
 	def self.composite_valuation
-		puts (free_cash_flow_method + divided_discount_model + capm_method)/3
+		@@companies.map do |company, value|
+			value[:composite_share_value} += (value[:expected_share_value] + value[:dividend_share_value] + value[:capm_share_value])/3
+		end
 	end
 
 	def self.free_cash_flow_method
@@ -52,14 +76,28 @@ class Company
 		num_shares
 	end
 	
-	# def self.dividend_discount_model
-		# Value = Dividend per share / (Discount rate - dividend growth rate)
-	# end
+	def self.dividend_discount_model
+		@@companies.map do |company, value|
+			cost_of_equity = (value[:dividend_per_share]/[:current_stock_price]) + value[:dividend_growth_rate]
+			value[:dividend_share_value} += value[:dividend_per_share]/( cost_of_equity - value[:dividend_growth_rate])
+		end
+	end
+	
+	def self.get_stock_prices
+		@@companies.each do |company, value|
+			quote_type = YahooFinance::StandardQuote
+			quote_symbols = "#{company}"
+			YahooFinance::get_quotes(quote_type, quote_symbols) do |qt|
+				value[:current_stock_price] += qt.lastTrade
+			end
+		end
+	end
 	
 	def self.capm_method
+		capm_years = years
 		@@companies.map do |company, value|
-			rate_of_return = @risk_free_rate + value[:beta](@market_growth_rate - @risk_free_rate)
-			value[:composite_share_value] = (rate_of_return + 1) * years * current_stockprice
+			rate_of_return = @@risk_free_rate + value[:beta] * (@@market_growth_rate - @@risk_free_rate)
+			value[:capm_share_value] += (rate_of_return + 1) * capm_years * value[:current_stock_price]
 		end
 	end
 
