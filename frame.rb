@@ -56,7 +56,7 @@ require 'yahoofinance'
 		:dividend_growth_rate => 0,
 		:beta => 1.33,
 		:cost_of_equity => 0,
-		:current_stock_price => 10,
+		:current_stock_price => 0,
 		:expected_share_value => 0,
 		:capm_share_value => 0,
 		:dividend_share_value => 0,
@@ -97,7 +97,7 @@ require 'yahoofinance'
 			quote_type = YahooFinance::StandardQuote
 			quote_symbols = "#{company}"
 			YahooFinance::get_quotes(quote_type, quote_symbols) do |qt|
-				value[:current_stock_price] += qt.lastTrade
+				value[:current_stock_price] = qt.lastTrade
 			end
 		end
 	end
@@ -113,8 +113,9 @@ require 'yahoofinance'
 		get_cost_of_equity
 		get_stock_prices
 		@@companies.map do |company, value|
-			value[:capm_share_value] += (value[:cost_of_equity] + 1) * capm_years * value[:current_stock_price]
+			value[:capm_share_value] = (value[:cost_of_equity] + 1) * capm_years * value[:current_stock_price]
 		end
+
 	end
 	
 	def self.num_shares
@@ -126,6 +127,14 @@ require 'yahoofinance'
 	def self.years
 		puts "How many years do you want to hold the stock for?"
 		gets.chomp.to_f
+	end
+
+	def self.test
+		@@companies.each do |company, value|
+			puts company
+			puts value
+		end
+		return nil
 	end
 	
 end
