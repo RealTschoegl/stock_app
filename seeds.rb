@@ -1,5 +1,6 @@
 Stock.new(
-		:company => "GOOG",
+		:company => "Google",
+		:stock_ticker => :GOOG,
 		:free_cash_flow => 16500,
 		:num_shares => 332, 
 		:PE_ratio => 25.8,
@@ -14,7 +15,8 @@ Stock.new(
 		:composite_share_value => 0
 		)
 Stock.new(
-		:company => "MSFT",
+		:company => "Microsoft",
+		:stock_ticker => :MSFT,
 		:free_cash_flow => 31626,
 		:num_shares => 8350,
 		:PE_ratio => 17.5,
@@ -29,7 +31,10 @@ Stock.new(
 		:composite_share_value => 0
 		)
 Stock.new( 
+		:company => "Yahoo!"
+		:stock_ticker => :YHOO,
 		:free_cash_flow => -281,
+		:stock_ticker => 
 		:num_shares => 1008,
 		:PE_ratio => 6.67,
 		:dividend_per_share => 0,
@@ -43,7 +48,8 @@ Stock.new(
 		:composite_share_value => 0
 		)
 Stock.new(
-		:company => "FB",
+		:company => "Facebook",
+		:stock_ticker => :FB,
 		:free_cash_flow => 1612,
 		:num_shares => 2420,
 		:PE_ratio => 872,
