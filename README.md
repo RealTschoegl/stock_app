@@ -7,7 +7,7 @@ This repository serves to manage the project tasks and loose files.  The actual 
 
 Tasks to complete:
 
-- [ X ] Add a function that pulls real-time stock prices
+- [X] Add a function that pulls real-time stock prices
 
 - [ X ] Launch a rails application to house the files
 
