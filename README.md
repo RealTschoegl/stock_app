@@ -17,14 +17,29 @@ Tasks to complete:
 
 - [x] Fix the routes to point to the appropriate pages
 
-- [ ] Set up the jQuery autocomplete to find stocks
+- [x] Set up the jQuery autocomplete to find stocks
 
-- [ ] Link user chosen stock to controller 
+- [x] Link user chosen stock to controller 
+
+- [x] Create a landing page
+
+- [ ] Rename the routes to stocks, picker, results
+
+- [ ] Delete CakeMix Model
 
 - [ ] Hook up stock.rb company_data hash to relevant data sources. 
 
-- [ ] Create a page view for the data
+- [ ] Send stock model data to the Picker controller
 
-- [ ] Create a landing page
+- [ ] Create a user input page layout on /picker/
 
-- [ ] Create a user input page for the user queries
+- [ ] Create a user input question on /picker
+
+- [ ] Make a CakeMix module that reruns the stock data
+
+- [ ] Send /picker/ data to /results/ controller
+
+- [ ] Design the /results/ view page
+
+- [ ] Create a page view for the finished stock prices on /results/
+
