@@ -7,24 +7,24 @@ This repository serves to manage the project tasks and loose files.  The actual 
 
 Tasks to complete:
 
-- [X] Add a function that pulls real-time stock prices
+- [x] Add a function that pulls real-time stock prices
 
-- [ X ] Launch a rails application to house the files
+- [x] Launch a rails application to house the files
 
-- [ X ] Create a database migration for the future stock data
+- [x]  Create a database migration for the future stock data
 
-- [ X ] Add a seed file 
+- [x] Add a seed file 
 
-- [ X ] Fix the routes to point to the appropriate pages
+- [x] Fix the routes to point to the appropriate pages
 
-- [   ] Set up the jQuery autocomplete to find stocks
+- [ ] Set up the jQuery autocomplete to find stocks
 
-- [   ] Link user chosen stock to controller 
+- [ ] Link user chosen stock to controller 
 
-- [   ] Hook up stock.rb company_data hash to relevant data sources. 
+- [ ] Hook up stock.rb company_data hash to relevant data sources. 
 
-- [   ] Create a page view for the data
+- [ ] Create a page view for the data
 
-- [   ] Create a landing page
+- [ ] Create a landing page
 
-- [   ] Create a user input page for the user queries
+- [ ] Create a user input page for the user queries
