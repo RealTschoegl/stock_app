@@ -31,15 +31,18 @@ Tasks to complete:
 
 - [ ] Send stock model data to the Picker controller
 
-- [ ] Create a user input page layout on /picker/
+- [ ] Create a user input page layout on /picker
 
 - [ ] Create a user input question on /picker
 
 - [ ] Make a CakeMix module that reruns the stock data
 
-- [ ] Send /picker/ data to /results/ controller
+- [ ] Send /picker data to /results controller
 
-- [ ] Design the /results/ view page
+- [ ] Design the /results view page
 
-- [ ] Create a page view for the finished stock prices on /results/
+- [ ] Create a page view for the finished stock prices on /results
+
+- [ ] Send the finalized stock values to the /results view 
+
 
