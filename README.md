@@ -23,7 +23,7 @@ Tasks to complete:
 
 - [x] Create a landing page
 
-- [ ] Rename the routes to stocks, picker, results
+- [x] Rename the routes to stocks, picker, results
 
 - [ ] Delete CakeMix Model
 
