@@ -27,6 +27,8 @@ Tasks to complete:
 
 - [ ] Delete CakeMix Model
 
+- [ ] Make StockBot image for /index
+
 - [ ] Hook up stock.rb company_data hash to relevant data sources. 
 
 - [ ] Send stock model data to the Picker controller
