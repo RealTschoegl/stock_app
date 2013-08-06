@@ -27,7 +27,7 @@ Tasks to complete:
 
 - [x] Delete CakeMix Model
 
-- [ ] Make StockBot image for /index
+- [x] Make StockBot image for /index
 
 - [ ] Hook up stock.rb company_data hash to relevant data sources. 
 
