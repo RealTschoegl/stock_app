@@ -25,7 +25,7 @@ Tasks to complete:
 
 - [x] Rename the routes to stocks, picker, results
 
-- [ ] Delete CakeMix Model
+- [x] Delete CakeMix Model
 
 - [ ] Make StockBot image for /index
 
