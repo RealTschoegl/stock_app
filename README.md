@@ -53,5 +53,7 @@ Tasks to complete:
 
 - [ ] Improve responsiveness of application views
 
+- [ ] Add Slim or Haml for more readable views
+
 
 
