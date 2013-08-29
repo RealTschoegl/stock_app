@@ -29,22 +29,29 @@ Tasks to complete:
 
 - [x] Make StockBot image for /index
 
-- [ ] Hook up stock.rb company_data hash to relevant data sources. 
+- [x] Hook up stock.rb company_data hash to relevant data sources. 
 
-- [ ] Send stock model data to the Picker controller
+- [x] Send stock model data to the Picker controller
 
-- [ ] Create a user input page layout on /picker
+- [x] Create a user input page layout on /picker
 
-- [ ] Create a user input question on /picker
+- [x] Create a user input question on /picker
 
-- [ ] Make a CakeMix module that reruns the stock data
+- [x] Make a CakeMix module that reruns the stock data
 
-- [ ] Send /picker data to /results controller
+- [x] Send /picker data to /results controller
 
-- [ ] Design the /results view page
+- [x] Design the /results view page
 
-- [ ] Create a page view for the finished stock prices on /results
+- [x] Create a page view for the finished stock prices on /results
 
-- [ ] Send the finalized stock values to the /results view 
+- [x] Send the finalized stock values to the /results view 
+
+- [ ] Complete commenting for existing code
+
+- [ ] Add testing unit for module methods
+
+- [ ] Improve responsiveness of application views
+
 
 
