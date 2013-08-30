@@ -55,5 +55,8 @@ Tasks to complete:
 
 - [ ] Add Slim or Haml for more readable views
 
+- [ ] Create an error message for when the stock is not found
+
+- [ ] Get it to deselect a stock on the /index page
 
 
