@@ -47,16 +47,16 @@ Tasks to complete:
 
 - [x] Send the finalized stock values to the /results view 
 
-- [ ] Complete commenting for existing code
+- [x] Complete commenting for existing code
+
+- [x] Improve responsiveness of application views
+
+- [x] Add Slim or Haml for more readable views
+
+- [x] Create an error message for when the stock is not found
+
+- [x] Get it to deselect a stock on the /index page
 
 - [ ] Add testing unit for module methods
-
-- [ ] Improve responsiveness of application views
-
-- [ ] Add Slim or Haml for more readable views
-
-- [ ] Create an error message for when the stock is not found
-
-- [ ] Get it to deselect a stock on the /index page
 
 
