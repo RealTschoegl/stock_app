@@ -65,5 +65,6 @@ Tasks to complete:
 
 - [ ] Integrate Quandl API
 
+- [ ] Revise the 404 & 500 pages
 
 
