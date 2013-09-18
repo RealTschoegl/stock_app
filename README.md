@@ -57,6 +57,13 @@ Tasks to complete:
 
 - [x] Get it to deselect a stock on the /index page
 
-- [ ] Add testing unit for module methods
+- [x] Add testing unit for module methods
+
+- [ ] Improve headers - SEO, tags, etc.  
+
+- [ ] Add Sticky Footer to pages
+
+- [ ] Integrate Quandl API
+
 
 
