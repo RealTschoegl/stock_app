@@ -59,12 +59,14 @@ Tasks to complete:
 
 - [x] Add testing unit for module methods
 
+- [x] Integrate Quandl API
+
 - [ ] Improve headers - SEO, tags, etc.  
 
 - [ ] Add Sticky Footer to pages
 
-- [ ] Integrate Quandl API
-
 - [ ] Revise the 404 & 500 pages
+
+- [ ] Add method to update the stock data regularly
 
 
