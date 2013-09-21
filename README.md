@@ -70,3 +70,7 @@ Tasks to complete:
 - [ ] Add method to update the stock data regularly
 
 - [ ] Use Nokogiri as a backup data source
+
+- [ ] Add a "buy stock" button
+
+- [ ] Include a "start again" button on error pages and a contact facility
