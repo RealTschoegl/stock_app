@@ -69,4 +69,4 @@ Tasks to complete:
 
 - [ ] Add method to update the stock data regularly
 
-
+- [ ] Use Nokogiri as a backup data source
