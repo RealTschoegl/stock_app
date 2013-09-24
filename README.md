@@ -65,7 +65,7 @@ Tasks to complete:
 
 - [ ] Add Sticky Footer to pages
 
-- [ ] Revise the 404 & 500 pages
+- [x] Revise the 404 & 500 pages
 
 - [ ] Add method to update the stock data regularly
 
@@ -73,4 +73,8 @@ Tasks to complete:
 
 - [ ] Add a "buy stock" button
 
-- [ ] Include a "start again" button on error pages and a contact facility
+- [ ] Create an email for Stockbot
+
+- [ ] Include a "start again" button on error form and a contact button
+
+- [ ] Create company pages
